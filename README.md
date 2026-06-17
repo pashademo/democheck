@@ -647,6 +647,9 @@ Route::put('/user/{user}', [App\Http\Controllers\ActionsController::class, 'edit
 ```
 ### Создание пользователя
 ```
+php artisan tinker
+```
+```
 App\Models\User::create(['email' => 'repev.egor@nttek.ru' , 'password' => '12345678' , 'need_to_change_password' => true , 'name' => 'George Repev']);
 ```
 ## 6 модуль
