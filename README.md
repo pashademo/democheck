@@ -78,8 +78,8 @@ CREATE TABLE order_items (
 );
 ```
 ## Запрос к БД (3 модуль)
-
-```SELECT
+```
+SELECT
     o.id AS order_id,
     SUM(oi.quantity * sm.quantity * m.price) AS total_cost
 FROM orders o
