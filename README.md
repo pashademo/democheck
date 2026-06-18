@@ -78,8 +78,8 @@ CREATE TABLE order_items (
 );
 ```
 ## Запрос к БД (3 модуль)
----
-SELECT
+
+```SELECT
     o.id AS order_id,
     SUM(oi.quantity * sm.quantity * m.price) AS total_cost
 FROM orders o
@@ -88,7 +88,7 @@ JOIN specifications s ON s.product_id = oi.product_id
 JOIN specification_materials sm ON sm.specification_id = s.id
 JOIN materials m ON sm.material_id = m.id
 GROUP BY o.id;
----
+```
 ---
 
 ## Миграции
